@@ -17,6 +17,7 @@ export default function DemographicScene({ demographic = "WHITE", next }) {
   const [step, setStep] = useState(0);
   const [phase, setPhase] = useState('text'); 
 
+
   const phrases = [
     "QUESTION:",
     "WHAT IS FREEDOM...",
@@ -64,7 +65,9 @@ export default function DemographicScene({ demographic = "WHITE", next }) {
   };
 
 return (
-    <section className="scene demographic-scene demographic-film-jitter" onClick={handleClick} ref={containerRef}>
+
+    <section className="scene demographic-scene" onClick={handleClick} ref={containerRef}>
+        <div className='demographic-film-jitter'> 
       {phase === 'text' && (
         <div className='demographic-text-container' ref={textRef}></div>
       )}
@@ -85,6 +88,7 @@ return (
           {/* <p className="p5-prompt-hint">[Click anywhere to proceed]</p> */}
         </div>
       )}
+      </div>
     </section>
   );
 }
