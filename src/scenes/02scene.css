@@ -1,0 +1,52 @@
+.scene-02.scene{
+    position: relative;
+  width: 100vw;
+  height: 100vh;
+  /* overflow: hidden; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: url(/cursors/magnifying-glass.svg) 0 0, auto;
+  
+
+}
+
+
+.declaration{
+  width: 25%;
+}
+
+.declaration:hover{
+  width: 40%;
+}
+.bg-layer {
+  z-index: 1;
+}
+
+.angel-layer {
+  position: absolute;
+  width: 180px;
+  height: auto; 
+  
+  left: 80%;
+  top: 58%;
+  
+  z-index: 991;
+  cursor: grab;
+}
+
+.shirt-layer {
+  position: absolute;
+  width: 100px;
+  height: auto; 
+  
+  left: 6%;
+  top: 68%;
+  
+  z-index: 991;
+  cursor: grab;
+}
+
+.text-layer{
+    z-index: 99;
+}

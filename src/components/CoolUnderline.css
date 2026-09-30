@@ -1,0 +1,19 @@
+.CoolUnderline-word {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding-bottom: 4px;
+}
+
+
+.CoolUnderline-line {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 50%; /* center it */
+  width: 2px; /* starts off as tiny dot, will animate width later */
+  height: 2px; 
+  background-color: #0d0d0d;
+  transform: translateX(-50%);  /* center it */
+  pointer-events: none;
+}

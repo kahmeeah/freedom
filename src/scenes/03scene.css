@@ -1,0 +1,61 @@
+.scene-container {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  align-items: center; 
+}
+
+.scene-03 {
+  animation: 
+    jitter 0.5s steps(1) infinite,
+    flicker 0.25s steps(1) infinite;
+
+
+}
+
+/* track/guidline for the panning over the scene */
+.pan-track {
+  display: flex;
+  align-items: center;
+  width: 350vw; 
+  flex-shrink: 0; 
+  padding-left: 50vw; 
+  padding-right: 50vw;
+  
+  /* shift target phrase*/
+  transform: translateY(-10%);  
+}
+
+
+.massive-paragraph {
+  font-family: 'Times New Roman', Times, serif; 
+  font-size: 11vw; 
+  color: gray; 
+  line-height: 1.1;
+  text-align: justify;
+  margin: 0;
+  white-space: normal; 
+}
+
+.target-phrase-wrapper {
+  color: #000000;
+  position: relative;
+  display: inline-block; 
+}
+
+.asterisk {
+  color: #ff0000;
+}
+
+.underline {
+  position: absolute;
+  bottom: 1vw;
+  left: 0;
+  width: 100%;
+  height: 0.8vw;
+  background-color: #000000;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+

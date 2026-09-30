@@ -1,0 +1,41 @@
+
+
+.scene-01 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* align-self: start;  */
+  cursor: url(/cursors/right-arrow.svg) 0 0, auto;
+  user-select: none;
+
+}
+
+
+.scene-01 button {
+  padding: 0.5rem 1.25rem;
+  border: 1px solid #0d0d0d;
+  background: transparent;
+  cursor: pointer;
+}
+
+.scene-01 #tell, .scene-01 #dream{
+    cursor: pointer;
+}
+
+
+/* #tell, #dream {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding-bottom: 4px;
+} */
+
+#tellVid, #dreamVid{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  object-fit: cover
+} 

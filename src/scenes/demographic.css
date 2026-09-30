@@ -1,0 +1,92 @@
+.demographic-scene {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #0d0d0d;
+  color: #f7f6f2;
+  cursor: url(/cursors/right-arrow-white.svg) 0 0, auto;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+.demographic-text-container {
+
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+.demographic-video {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  inset: 0;
+  object-fit: cover;
+  z-index: 10;
+}
+
+.demographic-p5-container {
+  text-align: center;
+  z-index: 20;
+}
+
+.demographic-p5-container h2 {
+  font-size: 3vw;
+  margin-bottom: 1rem;
+  font-family: monospace;
+}
+
+.demographic-p5-container p {
+  font-size: 1.2vw;
+  opacity: 0.6;
+  font-family: monospace;
+}
+
+
+.demographic-film-jitter {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  min-height: 100vh;
+
+  position: relative;
+  transform-origin: center center;
+  background-color: #0d0d0d;
+  animation: 
+    jitter 0.5s steps(1) infinite,
+    flicker 0.25s steps(1) infinite;
+
+
+  /* tell browser ahead of time to stop weird lags */
+  will-change: transform, filter; 
+  overflow: hidden;
+}
+
+/* slight jitter */
+@keyframes jitter {
+  0%   { transform: translate(0px, 0px) rotate(0deg); }
+  16%  { transform: translate(-0.8px, 0.4px) rotate(0.04deg); }
+  33%  { transform: translate(0.6px, -0.7px) rotate(-0.03deg); }
+  50%  { transform: translate(-0.4px, -0.3px) rotate(0.02deg); }
+  66%  { transform: translate(0.9px, 0.5px) rotate(-0.04deg); }
+  83%  { transform: translate(-0.7px, -0.6px) rotate(0.03deg); }
+}
+
+/* flicker */
+
+@keyframes flicker {
+  0%   { filter: brightness(1) contrast(1); }
+  20%  { filter: brightness(1.02) contrast(1.03); }
+  40%  { filter: brightness(0.99) contrast(0.98); }
+  60%  { filter: brightness(1.015) contrast(1.01); }
+  80%  { filter: brightness(0.985) contrast(1.02); }
+}
